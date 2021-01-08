@@ -28,7 +28,6 @@
     "Monaco"
   ],
   "license": "MIT",
-  
   "dependencies": {
     "lib0": "^0.2.33"
   },

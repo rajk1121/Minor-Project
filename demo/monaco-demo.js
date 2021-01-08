@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
   const editor = monaco.editor.create(/** @type {HTMLElement} */ (document.getElementById('monaco-editor')), {
     value: '',
     language: 'javascript',
-    theme: 'vs-dark'
+    theme: 'vs'
   })
   const monacoBinding = new MonacoBinding(type, /** @type {monaco.editor.ITextModel} */ (editor.getModel()), new Set([editor]), provider.awareness)
 
@@ -42,10 +42,10 @@ window.addEventListener('load', () => {
   connectBtn.addEventListener('click', () => {
     if (provider.shouldConnect) {
       provider.disconnect()
-      connectBtn.textContent = 'Connect'
+      connectBtn.textContent = 'Initiate Connection'
     } else {
       provider.connect()
-      connectBtn.textContent = 'Disconnect'
+      connectBtn.textContent = 'Terminate Collaboration'
     }
   })
 
